@@ -2,6 +2,14 @@ Host g11
 	HostName gentoo11.petrosoftinc.com
 	User okhomenko
 
+Host g18
+	HostName gentoo18.petrosoftinc.com
+	User okhomenko
+
+Host web
+	HostName web
+	User okh
+
 Host r610a
 	HostName r610a.petrosoftinc.com
 	User okhomenko
