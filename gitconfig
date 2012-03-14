@@ -11,3 +11,10 @@
 	trustExitCode = true
 [alias]
 	co = checkout
+	ci = commit
+	st = status
+	logg = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+[apply]
+	whitespace = nowarn
+[color]
+	branch = auto
