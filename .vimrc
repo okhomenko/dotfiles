@@ -18,7 +18,8 @@ set backupdir=/tmp
 set directory=/tmp
 set foldmethod=manual
 set vb
-set colorcolumn=80
+set colorcolumn=70
+set clipboard=unnamed
 
 " Syntax
 syntax on
