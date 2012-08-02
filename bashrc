@@ -132,7 +132,7 @@ function parse_git_branch {
     }
 
     [[ ${git_status} =~ "renamed:" ]] && {
-      git_is_dirty="${git_is_dirty}${Yellow}\$FF_ARROW"
+      git_is_dirty="${git_is_dirty}${Yellow}${FF_ARROW}"
     }
   fi
 
