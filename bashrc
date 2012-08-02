@@ -90,5 +90,5 @@ alias tmux='TERM=screen-256color-bce tmux'
 function parse_git_branch_and_add_brackets {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
 }
-export PS1="\$Purple\u\$Color_Off on \$Green\w\$Color_Off\$(parse_git_branch_and_add_brackets)\$Color_Off\n\$LIGHTNING_BOLT "
+export PS1="$Purple\u$Color_Off on $Green\w$Color_Off\$(parse_git_branch_and_add_brackets)$Color_Off\n\$LIGHTNING_BOLT "
 
