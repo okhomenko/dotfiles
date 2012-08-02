@@ -88,6 +88,68 @@ export TERM=screen-256color-bce
 
 alias tmux='TERM=screen-256color-bce tmux'
 
+function parse_git_branch {
+  branch_pattern="^# On branch ([^${IFS}]*)"
+  remote_pattern_ahead="# Your branch is ahead of"
+  remote_pattern_behind="# Your branch is behind"
+  remote_pattern_ff="# Your branch (.*) can be fast-forwarded."
+  diverge_pattern="# Your branch and (.*) have diverged"
+
+  git_status="$(git status 2> /dev/null)"
+  if [[ ! ${git_status} =~ ${branch_pattern} ]]; then
+    # Rebasing?
+    toplevel=$(git rev-parse --show-toplevel 2> /dev/null)
+    [[ -z "$toplevel" ]] && return
+
+    [[ -d "$toplevel/.git/rebase-merge" || -d "$toplevel/.git/rebase-apply" ]] && {
+      sha_file="$toplevel/.git/rebase-merge/stopped-sha"
+      [[ -e "$sha_file" ]] && {
+        sha=`cat "${sha_file}"`
+      }
+      echo "${Cyan}(rebase in progress)${Color_Off} ${sha}"
+    }
+    return
+  fi
+
+  branch=${BASH_REMATCH[1]}
+
+  # Dirty?
+  if [[ ! ${git_status} =~ "working directory clean" ]]; then
+    [[ ${git_status} =~ "modified:" ]] && {
+      git_is_dirty="${Red}${LIGHTNING_BOLT}"
+    }
+
+    [[ ${git_status} =~ "Untracked files" ]] && {
+      git_is_dirty="${git_is_dirty}${White}${MIDDOT}"
+    }
+
+    [[ ${git_status} =~ "new file:" ]] && {
+      git_is_dirty="${git_is_dirty}${IGreen}+"
+    }
+
+    [[ ${git_status} =~ "deleted:" ]] && {
+      git_is_dirty="${git_is_dirty}${Red}-"
+    }
+
+    [[ ${git_status} =~ "renamed:" ]] && {
+      git_is_dirty="${git_is_dirty}${Yellow}\$FF_ARROW"
+    }
+  fi
+
+  # Are we ahead of, beind, or diverged from the remote?
+  if [[ ${git_status} =~ ${remote_pattern_ahead} ]]; then
+    remote="${Yellow}${UP_ARROW}"
+  elif [[ ${git_status} =~ ${remote_pattern_ff} ]]; then
+    remote_ff="${White}${FF_ARROW}"
+  elif [[ ${git_status} =~ ${remote_pattern_behind} ]]; then
+    remote="${Yellow}${DOWN_ARROW}"
+  elif [[ ${git_status} =~ ${diverge_pattern} ]]; then
+    remote="${Yellow}${UD_ARROW}"
+  fi
+
+  echo "${remote}${remote_ff}${Green}(${branch})${Color_Off}${git_is_dirty}${Color_Off}"
+}
+
 function parse_git_branch_and_add_brackets {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
 }
