@@ -1,24 +1,8 @@
-Host g11
-	HostName gentoo11.petrosoftinc.com
-	User okhomenko
-
-Host g18
-	HostName gentoo18.petrosoftinc.com
-	User okhomenko
-
-Host web
-	HostName web
-	User okh
-
-Host r610a
-	HostName r610a.petrosoftinc.com
-	User okhomenko
-
-Host cvs.cstoreoffice.com
-	HostName cvs.cstoreoffice.com
-	User okhomenko
-
 Host ec2
 	HostName ec2-79-125-58-81.eu-west-1.compute.amazonaws.com
 	User ubuntu
 	IdentityFile /home/okh/.ssh/i5-home.pem
+
+Host sandbox
+  HostName sandbox.petrosoftinc.com
+  UserName okhomenko
