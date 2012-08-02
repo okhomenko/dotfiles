@@ -153,5 +153,5 @@ function parse_git_branch {
 function parse_git_branch_and_add_brackets {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
 }
-export PS1="$Purple\u$Color_Off in $Green\w$Color_Off$Purple\$(parse_git_branch_and_add_brackets)$Color_Off\n$Red\$LAMBDA$Color_Off "
+export PS1="$Purple\u$Color_Off in $Green\w$Color_Off$Purple\$(parse_git_branch)$Color_Off\n$Red\$LAMBDA$Color_Off "
 
