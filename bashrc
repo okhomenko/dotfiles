@@ -147,11 +147,11 @@ function parse_git_branch {
     remote="${Yellow}${UD_ARROW}"
   fi
 
-  echo -e "${remote}${remote_ff}${Purple}(${branch}${Color_Off}${git_is_dirty}${Purple})${Color_Off}"
+  echo -e " on ${remote}${remote_ff}${Purple}(${branch}${Color_Off}${git_is_dirty}${Purple})${Color_Off}"
 }
 
 function parse_git_branch_and_add_brackets {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
 }
-export PS1="$Purple\u$Color_Off in $Green\w$Color_Off$Purple\$(parse_git_branch)$Color_Off\n$Red\$LAMBDA$Color_Off "
+export PS1="$Purple\u$Color_Off in $Green\w$Color_Off\$(parse_git_branch)\n$Red\$LAMBDA$Color_Off "
 
