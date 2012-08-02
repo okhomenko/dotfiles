@@ -147,7 +147,7 @@ function parse_git_branch {
     remote="${Yellow}${UD_ARROW}"
   fi
 
-  echo "${remote}${remote_ff}${Green}(${branch})${Color_Off}${git_is_dirty}${Color_Off}"
+  echo -e "${remote}${remote_ff}${Purple}(${branch}${Color_Off}${git_is_dirty}${Purple})${Color_Off}"
 }
 
 function parse_git_branch_and_add_brackets {
