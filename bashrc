@@ -82,6 +82,7 @@ On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
 export PS1=""
+export LANG="en_US.UTF-8"
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export TERM=screen-256color-bce
