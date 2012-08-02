@@ -86,6 +86,8 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export TERM=screen-256color-bce
 
+export PATH=~/bin:$PATH
+
 alias tmux='TERM=screen-256color-bce tmux'
 
 function parse_git_branch {
