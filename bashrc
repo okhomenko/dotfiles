@@ -1,8 +1,7 @@
-export PATH=~/bin:/usr/local/bin:/usr/local/mysql/bin:/opt/local/bin:$PATH
-export NODE_PATH=/opt/local/lib/node_modules
 export PS1=""
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export TERM=screen-256color-bce
 
 alias tmux='TERM=screen-256color-bce tmux'
 
