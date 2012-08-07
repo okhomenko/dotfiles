@@ -24,6 +24,7 @@ set clipboard=unnamed
 " Syntax
 syntax on
 set background=dark
+" color zenburn
 color wombat256mod
 filetype plugin on
 filetype indent off
