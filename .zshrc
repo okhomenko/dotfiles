@@ -60,7 +60,6 @@ PROMPT='%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}
 # Path overrides
 export PATH=~/.scripts:$PATH
 export PATH=/usr/local/bin:$PATH
-<<<<<<< HEAD
 export PATH=/usr/local/Cellar/ruby/1.9.2-p290/bin:$PATH
 export PATH=~/.cabal/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
@@ -68,6 +67,7 @@ export PATH=/usr/local/sbin:$PATH
 
 # Other overrides
 export NODE_PATH=/usr/local/lib/node_modules/
+export GEM_PATH=/Library/Ruby/Gems/1.8/:${GEM_PATH}
 
 # SSH Agent
 SSH_ENV="$HOME/.ssh/environment"

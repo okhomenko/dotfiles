@@ -1,8 +1,9 @@
+Host sandbox
+	HostName sandbox.petrosoftinc.com
+	User okhomenko
+
 Host ec2
 	HostName ec2-79-125-58-81.eu-west-1.compute.amazonaws.com
 	User ubuntu
 	IdentityFile /home/okh/.ssh/i5-home.pem
 
-Host sandbox
-  HostName sandbox.petrosoftinc.com
-  UserName okhomenko
