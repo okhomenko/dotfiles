@@ -156,5 +156,7 @@ function parse_git_branch {
 function parse_git_branch_and_add_brackets {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
 }
-export PS1="$Purple\u$Color_Off in $Green\w$Color_Off\$(parse_git_branch)\n$Red\$LAMBDA$Color_Off "
+export PS1="$IPurple\u$Color_Off in $IGreen\w$Color_Off\$(parse_git_branch)\n$IRed\$LAMBDA$Color_Off "
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
