@@ -64,6 +64,7 @@ export PATH=/usr/local/Cellar/ruby/1.9.2-p290/bin:$PATH
 export PATH=~/.cabal/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export TERM=screen-256color-bce
 
 # Other overrides
 export NODE_PATH=/usr/local/lib/node_modules/
