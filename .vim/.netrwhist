@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/timbranyen/git/backbone-boilerplate/assets/js/libs'
-let g:netrw_dirhist_2='/Users/timbranyen/git/grunt/tasks'
-let g:netrw_dirhist_3='/home/tim/git/backbone-modules'
-let g:netrw_dirhist_4='/home/tim/git/backbone.layoutmanager/lol.html'
-let g:netrw_dirhist_5='/Users/okh/Sites/cstore/htdocs/reports/Store/salesandprofit_js/test/jasmine'
-let g:netrw_dirhist_6='/Users/okh/Sites/cstore/htdocs/reports/Store/salesandprofit_js/.git'
