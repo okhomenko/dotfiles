@@ -29,6 +29,14 @@ function box_name {
   [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 }
 
+function heart {
+  echo '♥' && return
+}
+
+function cloud {
+  echo '☁' && return
+}
+
 function lambda {
   echo 'λ' && return
 }
@@ -41,7 +49,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 preexec () { print -rn -- $terminfo[el]; }
 PROMPT='%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg[red]%}
-$(lambda)%{$reset_color%} '
+$(heart)%{$reset_color%} '
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin # Add RVM to PATH for scripting
