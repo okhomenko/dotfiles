@@ -1,4 +1,5 @@
 # Lines configured by zsh-newuser-install
+export TERM="xterm-256color"
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -55,8 +56,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/python
 
-# alias tmux="tmux -2"
+alias tmux="tmux -2"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export TERM="xterm-256color"
