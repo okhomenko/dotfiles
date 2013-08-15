@@ -3,9 +3,13 @@ execute pathogen#infect()
 " Defaults
 set wildmode=list:longest
 set number
-set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set foldlevel=99
 set t_ut=
+
+set listchars=tab:→\ ,trail:·
+" set listchars=eol:¬,tab:→\ ,trail:·
+set list
 
 " Syntax
 syntax on
@@ -34,3 +38,11 @@ augroup myvimrchooks
   au!
   autocmd bufwritepost .vimrc source $MYVIMRC
 augroup END
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra' " CtrlP will set its local working directory
+set wildignore+=*.swp     " ignore files Linux/MacOSX
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$' " ignore SCM directories
+let g:ctrlp_custom_ignore = '\v[\/]node_modules$' " ignore SCM directories
