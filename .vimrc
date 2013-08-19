@@ -10,6 +10,8 @@ set t_ut=
 set listchars=tab:→\ ,trail:·
 " set listchars=eol:¬,tab:→\ ,trail:·
 set list
+" Accomodate for your fat fingers
+command! W w
 
 " Syntax
 syntax on
@@ -26,6 +28,8 @@ filetype plugin indent on
 
 let mapleader = ','
 
+" Insert a linebreak
+noremap <leader>j i<Enter><Esc>
 noremap <Leader>f :NERDTreeToggle<CR>
 
 function! UpdateVimRC()
