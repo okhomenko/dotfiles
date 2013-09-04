@@ -48,5 +48,5 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra' " CtrlP will set its local working directory
 set wildignore+=*.swp     " ignore files Linux/MacOSX
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$' " ignore SCM directories
-let g:ctrlp_custom_ignore = '\v[\/]node_modules$' " ignore SCM directories
+let g:ctrlp_custom_ignore = '\v[\/\\]\.(git|hg|svn)$' " ignore SCM directories
+let g:ctrlp_custom_ignore = '\v[\/\\]node_modules$' " ignore SCM directories
