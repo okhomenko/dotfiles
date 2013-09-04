@@ -2,16 +2,20 @@ execute pathogen#infect()
 
 " Defaults
 set wildmode=list:longest
+set cursorline
 set number
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set foldlevel=99
 set t_ut=
+set hlsearch
+set spell
 
 set listchars=tab:→\ ,trail:·
 " set listchars=eol:¬,tab:→\ ,trail:·
 set list
 " Accomodate for your fat fingers
 command! W w
+set backupcopy=yes
 
 " Syntax
 syntax on
