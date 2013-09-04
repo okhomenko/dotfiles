@@ -42,6 +42,26 @@ function lambda {
   echo 'λ' && return
 }
 
+function multidots {
+  echo '⁞' && return
+}
+
+function infinity {
+  echo '∞' && return
+}
+
+function angle {
+  echo '∟' && return
+}
+
+function integral {
+  echo '∫' && return
+}
+
+function darksmile {
+  echo '☻' && return
+}
+
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
@@ -50,7 +70,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 preexec () { print -rn -- $terminfo[el]; }
 PROMPT='%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg[red]%}
-$(heart)%{$reset_color%} '
+$(lambda)%{$reset_color%} '
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin # Add RVM to PATH for scripting
