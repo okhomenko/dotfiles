@@ -47,6 +47,10 @@ augroup myvimrchooks
   autocmd bufwritepost .vimrc source $MYVIMRC
 augroup END
 
+" Folding base on indentation and 2 spaces
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
