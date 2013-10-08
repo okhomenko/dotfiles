@@ -76,7 +76,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/python
 
+alias screen="screen -R" ### start to attach previous session
 alias tmux="tmux -2"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export CLOJURESCRIPT_HOME="~/Sites/clojurescript"

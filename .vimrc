@@ -4,11 +4,12 @@ execute pathogen#infect()
 set wildmode=list:longest
 set cursorline
 set number
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+" set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set foldlevel=99
 set t_ut=
 set hlsearch
-set spell
+set nospell
 
 set listchars=tab:→\ ,trail:·
 " set listchars=eol:¬,tab:→\ ,trail:·
@@ -22,8 +23,8 @@ syntax on
 set t_Co=256
 set background=dark
 colorscheme molokai
-" colorscheme Grunge
-" colorscheme wombat256mod
+colorscheme Grunge
+colorscheme wombat256mod
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")
@@ -35,6 +36,9 @@ let mapleader = ','
 " Insert a linebreak
 noremap <leader>j i<Enter><Esc>
 noremap <Leader>f :NERDTreeToggle<CR>
+" Change tab stop
+map <silent> <leader>t2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
+map <silent> <leader>t4 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>
 
 function! UpdateVimRC()
   for server in split(serverlist())
@@ -58,3 +62,7 @@ let g:ctrlp_working_path_mode = 'ra' " CtrlP will set its local working director
 set wildignore+=*.swp     " ignore files Linux/MacOSX
 let g:ctrlp_custom_ignore = '\v[\/\\]\.(git|hg|svn)$' " ignore SCM directories
 let g:ctrlp_custom_ignore = '\v[\/\\]node_modules$' " ignore SCM directories
+
+if filereadable(".vim.custom")
+  so .vim.custom
+endif
