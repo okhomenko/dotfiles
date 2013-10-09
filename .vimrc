@@ -35,7 +35,9 @@ let mapleader = ','
 
 " Insert a linebreak
 noremap <leader>j i<Enter><Esc>
-noremap <Leader>f :NERDTreeToggle<CR>
+noremap <leader>f :NERDTreeToggle<CR>
+noremap <leader>n :!node %<CR>
+noremap <leader>c :!coffee %<CR>
 " Change tab stop
 map <silent> <leader>t2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
 map <silent> <leader>t4 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>
