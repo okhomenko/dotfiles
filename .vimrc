@@ -56,6 +56,7 @@ augroup END
 " Folding base on indentation and 2 spaces
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+au BufNewFile,BufRead *.as set filetype=actionscript
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'

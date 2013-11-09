@@ -12,3 +12,5 @@
 	branch = auto
 [url "https://"]
 	insteadOf = git://
+[core]
+	autocrlf = input
