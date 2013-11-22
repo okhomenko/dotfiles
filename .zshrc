@@ -75,6 +75,7 @@ $(multidots)%{$reset_color%} '
 PATH="/usr/local/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin # Add RVM to PATH for scripting
+PATH=$PATH:~/bin # Add RVM to PATH for scripting
 
 # Flex paths
 PATH=$PATH:/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec/bin
