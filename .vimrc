@@ -32,6 +32,10 @@ let &colorcolumn="80,".join(range(120,999),",")
 
 filetype plugin indent on
 
+let jshint2_read = 1
+let jshint2_save = 1
+
+
 let mapleader = ','
 
 " Insert a linebreak
@@ -42,6 +46,7 @@ noremap <leader>c :!coffee %<CR>
 " Change tab stop
 map <silent> <leader>t2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
 map <silent> <leader>t4 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>
+map <silent> <leader>t4f :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
 
 function! UpdateVimRC()
   for server in split(serverlist())
@@ -59,14 +64,14 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 au BufNewFile,BufRead *.as set filetype=actionscript
 
+" Flex Development
+au BufNewFile,BufRead *.mxml setfiletype mxml
+au BufNewFile,BufRead *.as setfiletype actionscript
+
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra' " CtrlP will set its local working directory
-set wildignore+=*.swp     " ignore files Linux/MacOSX
 let g:ctrlp_custom_ignore = '\v[\/\\]\.(git|hg|svn)$' " ignore SCM directories
-let g:ctrlp_custom_ignore = '\v[\/\\](node_modules|npm-cache)$' " ignore node directories
+let g:ctrlp_custom_ignore = '\v[\/\\](node_modules|npm-cache|bin-debug)$' " ignore node and flex directories
 
-if filereadable(".vim.custom")
-  so .vim.custom
-endif
