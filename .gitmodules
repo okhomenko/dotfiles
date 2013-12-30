@@ -7,24 +7,9 @@
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule ".vim/bundle/vim-fireplace"]
-	path = .vim/bundle/vim-fireplace
-	url = git://github.com/tpope/vim-fireplace.git
-[submodule ".vim/bundle/vim-classpath"]
-	path = .vim/bundle/vim-classpath
-	url = git://github.com/tpope/vim-classpath.git
-[submodule ".vim/bundle/vim-clojure-static"]
-	path = .vim/bundle/vim-clojure-static
-	url = git://github.com/guns/vim-clojure-static.git
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script
 [submodule "node_modules"]
 	path = node_modules
 	url = https://github.com/fform/update
-[submodule ".vim/bundle/vim-jade"]
-	path = .vim/bundle/vim-jade
-	url = git://github.com/digitaltoad/vim-jade.git
 [submodule ".vim/bundle/jshint2.vim"]
 	path = .vim/bundle/jshint2.vim
 	url = https://github.com/Shutnik/jshint2.vim.git
