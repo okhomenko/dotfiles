@@ -83,3 +83,4 @@ export FLEX_HOME=/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec
 
 alias screen="screen -R" ### start to attach previous session
 alias tmux="tmux -2"
+alias vim="DYLD_FORCE_FLAT_NAMESPACE=1 vim"

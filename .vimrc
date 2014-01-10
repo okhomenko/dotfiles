@@ -29,6 +29,8 @@ colorscheme wombat256mod
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")
+" put useful info in status bar
+set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 
 filetype plugin indent on
 
@@ -69,9 +71,11 @@ au BufNewFile,BufRead *.mxml setfiletype mxml
 au BufNewFile,BufRead *.as setfiletype actionscript
 
 " CtrlP
+" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra' " CtrlP will set its local working directory
 let g:ctrlp_custom_ignore = '\v[\/\\]\.(git|hg|svn)$' " ignore SCM directories
 let g:ctrlp_custom_ignore = '\v[\/\\](node_modules|npm-cache|bin-debug)$' " ignore node and flex directories
+
 
