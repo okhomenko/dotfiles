@@ -75,12 +75,12 @@ $(multidots)%{$reset_color%} '
 PATH="/usr/local/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin # Add RVM to PATH for scripting
-PATH=$PATH:~/bin # Add RVM to PATH for scripting
+PATH=$PATH:~/bin/dotfiles # Add RVM to PATH for scripting
 
 # Flex paths
 PATH=$PATH:/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec/bin
 export FLEX_HOME=/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec
 
 alias screen="screen -R" ### start to attach previous session
-alias tmux="tmux -2"
+alias tmux="tmx.sh -2"
 alias vim="DYLD_FORCE_FLAT_NAMESPACE=1 vim"
