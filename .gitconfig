@@ -6,6 +6,7 @@
 	ci = commit
 	st = status
 	logg = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	dt = difftool
 [apply]
 	whitespace = nowarn
 [color]
@@ -14,3 +15,7 @@
 	insteadOf = git://
 [core]
 	autocrlf = input
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false

@@ -23,8 +23,6 @@ set grepprg=ack
 syntax on
 set t_Co=256
 set background=dark
-colorscheme molokai
-colorscheme Grunge
 colorscheme wombat256mod
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
@@ -37,14 +35,12 @@ filetype plugin indent on
 let jshint2_read = 1
 let jshint2_save = 1
 
-
 let mapleader = ','
 
 " Insert a linebreak
 noremap <leader>j i<Enter><Esc>
 noremap <leader>f :NERDTreeToggle<CR>
 noremap <leader>n :!node %<CR>
-noremap <leader>c :!coffee %<CR>
 " Change tab stop
 map <silent> <leader>t2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
 map <silent> <leader>t4 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>
@@ -61,14 +57,6 @@ augroup myvimrchooks
   autocmd bufwritepost .vimrc source $MYVIMRC
 augroup END
 
-" Folding base on indentation and 2 spaces
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-au BufNewFile,BufRead *.as set filetype=actionscript
-
-" Flex Development
-au BufNewFile,BufRead *.mxml setfiletype mxml
-au BufNewFile,BufRead *.as setfiletype actionscript
 
 " CtrlP
 " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
