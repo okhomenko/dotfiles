@@ -9,7 +9,7 @@ set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set foldlevel=99
 set t_ut=
 set hlsearch
-set nospell
+set spell spelllang=en_us
 
 set listchars=tab:→\ ,trail:·
 " set listchars=eol:¬,tab:→\ ,trail:·
@@ -29,6 +29,8 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")
 " put useful info in status bar
 set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
 filetype plugin indent on
 
@@ -66,4 +68,13 @@ let g:ctrlp_working_path_mode = 'ra' " CtrlP will set its local working director
 let g:ctrlp_custom_ignore = '\v[\/\\]\.(git|hg|svn)$' " ignore SCM directories
 let g:ctrlp_custom_ignore = '\v[\/\\](node_modules|npm-cache|bin-debug)$' " ignore node and flex directories
 
+" Tmuxline
+let g:tmuxline_preset = 'full'
 
+" Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+map <F3> <Esc>:Ack 
+
+if filereadable(".vim.custom")
+  so .vim.custom
+endif
