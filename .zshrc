@@ -69,7 +69,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 preexec () { print -rn -- $terminfo[el]; }
-PROMPT='%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg[red]%}
+PROMPT='%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[magenta]%}$(box_name)%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg[red]%}
 $(multidots)%{$reset_color%} '
 
 PATH="/usr/local/bin:$PATH"

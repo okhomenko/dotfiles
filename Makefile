@@ -16,6 +16,9 @@ init_svn:
 init_git:
 	ln -nfs `pwd`/.gitconfig ~/
 
+init_boxname:
+	ln -nfs `pwd`/.box-name ~/
+
 init_ssh:
 	ln -nfs `pwd`/ssh_config ~/.ssh/config
 
