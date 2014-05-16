@@ -31,5 +31,5 @@ init_fonts:
 	cp "Monaco for Powerline.otf" ~/Library/Fonts
 	echo "\n!!!Set Monaco for Powerline.otf in your terminal\n"
 
-init: init_bash init_zsh init_vim init_tmux init_svn init_git init_ssh init_submodules init_fonts
+init: init_bash init_zsh init_vim init_tmux init_svn init_git init_boxname init_ssh init_submodules init_fonts
 
