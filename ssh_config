@@ -1,3 +1,6 @@
+Host gl-mac
+  HostName 10.46.3.30
+  UserName okh
 Host 111
   HostName 10.47.108.111
   User root
