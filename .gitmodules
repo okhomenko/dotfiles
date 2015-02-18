@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/vim-bufferline"]
 	path = .vim/bundle/vim-bufferline
 	url = https://github.com/bling/vim-bufferline
-[submodule ".vim/bundle/vim-lightline"]
-	path = .vim/bundle/vim-lightline
-	url = https://github.com/itchyny/lightline.vim.git
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
