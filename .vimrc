@@ -15,6 +15,7 @@ set grepprg=ack
 
 " Syntax
 syntax on
+set t_ut=
 set t_Co=256
 set background=dark
 colorscheme monokai
@@ -35,7 +36,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-bufferline'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'bling/vim-bufferline'
+Plugin 'elzr/vim-json'
 
 call vundle#end()
 
@@ -51,6 +54,9 @@ noremap <leader>n :!node %<CR>
 map <silent> <leader>t2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
 map <silent> <leader>t4 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>
 map <silent> <leader>t4f :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
+
+" open each buffer in its own tabpage
+" au BufAdd,BufNewFile * nested tab sball
 
 augroup myvimrchooks
   au!

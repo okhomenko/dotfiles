@@ -5,7 +5,7 @@ init_vim:
 	ln -nfs `pwd`/.vim* ~/
 
 init_tmux:
-	ln -nfs `pwd`/.tmux ~/
+	ln -nfs `pwd`/.tmux* ~/
 
 init_git:
 	ln -nfs `pwd`/.gitconfig ~/
