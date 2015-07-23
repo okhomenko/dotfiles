@@ -3,6 +3,7 @@
 	email = okhomenko@gmail.com
 [alias]
 	co = checkout
+	d = diff -M
 	ci = commit
 	st = status
 	logg = log --pretty=format:'%Cgreen%ad%Creset %C(yellow)%h%Creset%C(red)%d%Creset %s %C(cyan)[%an]%Creset %Cgreen(%ar)%Creset' --date=short --graph
@@ -11,11 +12,12 @@
 	whitespace = nowarn
 [color]
 	branch = auto
-[url "https://"]
-	insteadOf = git://
 [core]
 	autocrlf = input
+	editor = subl
 [diff]
-	tool = vimdiff
+	tool = subl
 [difftool]
 	prompt = false
+[push]
+	default = simple

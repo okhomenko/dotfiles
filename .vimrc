@@ -1,6 +1,6 @@
 " Defaults
 set wildmode=list:longest
-set cursorline
+" set cursorline
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 " set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set hlsearch
@@ -13,12 +13,16 @@ command! W w
 set backupcopy=yes
 set grepprg=ack
 
+" Enable scrolling with mouse
+" set mouse=a
+
+" Enable clipboard to used for copy/paste
+set clipboard=unnamed
+
 " Syntax
-syntax on
+syntax enable
 set t_ut=
-set t_Co=256
-set background=dark
-colorscheme monokai
+" set background=dark
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")
@@ -30,17 +34,32 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'crusoexia/vim-monokai'
-Plugin 'pangloss/vim-javascript'
+" Surround
 Plugin 'tpope/vim-surround'
+
+" Ack (Ag) support
 Plugin 'mileszs/ack.vim'
+
+" CtrlP - for fast file search
 Plugin 'kien/ctrlp.vim'
+
+" NerdTree - file explorer
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+
+" Show buffers list in status line
 Plugin 'bling/vim-bufferline'
-Plugin 'elzr/vim-json'
+
+" Syntax checker (linter). Support jshint
+Plugin 'scrooloose/syntastic'
+
+" Git gutter
+Plugin 'airblade/vim-gitgutter'
+
+" OceanicNext vim scheme
+Plugin 'yosiat/oceanic-next-vim'
 
 call vundle#end()
+colorscheme oceanicnext
 
 filetype plugin indent on
 
@@ -60,7 +79,8 @@ map <silent> <leader>t4f :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<C
 
 augroup myvimrchooks
   au!
-  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd bufwritepost ~/.vimrc silent! source $MYVIMRC
+  autocmd bufwritepost .vimrc.custom source .vimrc.custom
 augroup END
 
 " CtrlP
@@ -75,6 +95,6 @@ let g:ctrlp_custom_ignore = '\v[\/\\](node_modules|npm-cache)$' " ignore node di
 let g:ackprg = 'ag --nogroup --nocolor --column'
 map <F3> <Esc>:Ack 
 
-if filereadable(".vim.custom")
-  so .vim.custom
+if filereadable(".vimrc.custom")
+  so .vimrc.custom
 endif

@@ -4,9 +4,6 @@ init_bash:
 init_vim:
 	ln -nfs `pwd`/.vim* ~/
 
-init_tmux:
-	ln -nfs `pwd`/.tmux* ~/
-
 init_git:
 	ln -nfs `pwd`/.gitconfig ~/
 
@@ -16,6 +13,5 @@ init_boxname:
 init_submodules:
 	git submodule update --init --recursive
 
-
-init: init_bash init_vim init_tmux init_git init_boxname init_submodules
+init: init_bash init_vim init_git init_boxname init_submodules
 
