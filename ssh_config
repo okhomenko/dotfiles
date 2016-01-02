@@ -1,0 +1,4 @@
+Host vl
+  HostName vl-aus-bsm-bl02.bmc.com
+  Port 22
+  User panama

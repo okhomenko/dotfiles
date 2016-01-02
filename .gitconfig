@@ -5,13 +5,15 @@
 	co = checkout
 	d = diff -M
 	ci = commit
-	st = status
+	st = status -bs
 	logg = log --pretty=format:'%Cgreen%ad%Creset %C(yellow)%h%Creset%C(red)%d%Creset %s %C(cyan)[%an]%Creset %Cgreen(%ar)%Creset' --date=short --graph
 	dt = difftool
 [apply]
 	whitespace = nowarn
 [color]
 	branch = auto
+	ui = true
+	diff = true
 [core]
 	autocrlf = input
 	editor = subl --wait
@@ -21,3 +23,7 @@
 	prompt = false
 [push]
 	default = simple
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
